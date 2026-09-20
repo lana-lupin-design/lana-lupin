@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Переменные - Минимализм + Магия */
         :root {
             --bg-color-start: #fcf8f8; 
             --bg-color-end: #f0d6dc;   
@@ -26,7 +25,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            /* Возвращаем нежный, светлый градиент */
             background: 
                 radial-gradient(ellipse at 10% 20%, var(--glow-pink) 0%, transparent 60%),
                 radial-gradient(ellipse at 90% 80%, var(--glow-pink) 0%, transparent 60%),
@@ -41,7 +39,7 @@
 
         .container { max-width: 1300px; margin: 0 auto; padding: 0 20px; }
 
-        /* НАВИГАЦИЯ (Стеклянная) */
+        /* НАВИГАЦИЯ */
         .navbar {
             position: fixed; top: 0; left: 0; width: 100%;
             background: rgba(255, 255, 255, 0.75);
@@ -60,13 +58,12 @@
         .nav-logo {
             font-family: var(--font-serif); font-size: 1.8rem;
             color: var(--accent-burgundy); text-decoration: none; font-style: italic;
-            text-shadow: 0 2px 10px rgba(107, 29, 33, 0.05);
         }
 
-        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links { display: flex; gap: 22px; list-style: none; }
         .nav-links a {
             text-decoration: none; color: var(--text-main);
-            font-weight: 500; font-size: 0.95rem;
+            font-weight: 500; font-size: 0.88rem;
             transition: all 0.3s ease; position: relative;
         }
         .nav-links a::after {
@@ -81,10 +78,10 @@
         @media (max-width: 900px) {
             .nav-container { flex-direction: column; gap: 10px; }
             .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
-            body { padding-top: 120px; }
+            body { padding-top: 150px; }
         }
 
-        /* HERO (Звездная магия) */
+        /* HERO */
         .hero-section {
             display: flex; flex-direction: column; align-items: center; justify-content: center;
             text-align: center; padding: 120px 0 80px; position: relative;
@@ -130,16 +127,14 @@
         @media (max-width: 900px) {
             .hero-section { padding: 60px 0 40px; }
             .hero-title { font-size: 4.5rem; }
-            .floating-star { display: none; } /* Убираем летающие звезды на мобильных для чистоты */
+            .floating-star { display: none; }
         }
         @media (max-width: 480px) {
             .hero-title { font-size: 3.2rem; }
             .hero-title span::after { display: none; }
         }
 
-        /* ==========================================
-           ИНФОРМАЦИОННЫЕ БЛОКИ (Воздушные)
-           ========================================== */
+        /* ИНФОРМАЦИОННЫЕ БЛОКИ */
         .info-section-wrapper {
             scroll-margin-top: 100px;
             margin: 0 0 60px 0;
@@ -157,7 +152,6 @@
             border: 1px solid rgba(255, 255, 255, 0.6);
             box-shadow: 0 15px 35px -10px rgba(107, 29, 33, 0.06);
         }
-
         .info-block.span-full { grid-column: 1 / -1; }
 
         .info-title {
@@ -174,20 +168,14 @@
         .info-text strong { font-weight: 500; color: var(--accent-burgundy); }
 
         .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
-        .skill-category {
-            background: rgba(255, 255, 255, 0.3); border-radius: 16px; padding: 15px 20px;
-        }
-        .skill-category h4 {
-            font-family: var(--font-serif); font-size: 1.1rem; color: var(--accent-burgundy); margin-bottom: 10px; font-weight: 400;
-        }
+        .skill-category { background: rgba(255, 255, 255, 0.3); border-radius: 16px; padding: 15px 20px; }
+        .skill-category h4 { font-family: var(--font-serif); font-size: 1.1rem; color: var(--accent-burgundy); margin-bottom: 10px; font-weight: 400; }
         .skill-category ul { list-style: none; padding: 0; }
         .skill-category ul li {
             font-size: 0.95rem; line-height: 1.6; font-weight: 300; padding: 2px 0;
             position: relative; padding-left: 15px;
         }
-        .skill-category ul li::before {
-            content: '—'; position: absolute; left: 0; color: var(--accent-pink);
-        }
+        .skill-category ul li::before { content: '—'; position: absolute; left: 0; color: var(--accent-pink); }
         .skill-category ul li strong { font-weight: 600; color: var(--text-main); }
 
         @media (max-width: 900px) {
@@ -196,32 +184,24 @@
             .skills-grid { grid-template-columns: 1fr; gap: 15px; }
         }
 
-        /* ==========================================
-           БЛОКИ ПОРТФОЛИО (Светлые, чистые)
-           ========================================== */
+        /* БЛОКИ ПОРТФОЛИО */
         .section-wrapper { scroll-margin-top: 100px; margin-bottom: 100px; }
         .section-header {
             display: flex; justify-content: space-between; align-items: flex-end;
             border-bottom: 1px solid rgba(107, 29, 33, 0.1); padding-bottom: 20px; margin-bottom: 40px; flex-wrap: wrap; gap: 15px;
         }
-        .section-title {
-            font-family: var(--font-serif); font-size: 3.2rem; font-weight: 400; color: var(--text-main);
-        }
+        .section-title { font-family: var(--font-serif); font-size: 3.2rem; font-weight: 400; color: var(--text-main); }
         .section-tags {
             display: flex; gap: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-light);
         }
 
         .sub-case { margin-bottom: 60px; }
         .sub-case:last-child { margin-bottom: 0; }
-        .sub-case-title {
-            font-family: var(--font-serif); font-size: 2rem; color: var(--accent-burgundy); margin-bottom: 10px; font-weight: 400;
-        }
+        .sub-case-title { font-family: var(--font-serif); font-size: 2rem; color: var(--accent-burgundy); margin-bottom: 10px; font-weight: 400; }
         .sub-case-desc { color: var(--text-light); font-weight: 300; margin-bottom: 30px; max-width: 600px; }
 
-        /* ГАЛЕРЕЯ (Карточки с белым фоном) */
-        .gallery {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px;
-        }
+        /* ГАЛЕРЕЯ */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
         .gallery-item {
             position: relative; overflow: hidden; border-radius: 16px; background: #ffffff;
             box-shadow: 0 15px 35px -10px rgba(107, 29, 33, 0.08);
@@ -259,56 +239,104 @@
            ========================================== */
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(20, 10, 12, 0.75); backdrop-filter: blur(12px);
+            background: rgba(20, 10, 12, 0.78); backdrop-filter: blur(12px);
             display: none; justify-content: center; align-items: center;
             z-index: 2000; padding: 20px; 
             opacity: 0; transition: opacity 0.5s ease;
         }
         .modal-overlay.active { display: flex; opacity: 1; }
 
-        .modal-box-case, .modal-box-simple {
+        /* --- ОКНО ДЛЯ КЕЙСОВ (СЛАЙДЕР) --- */
+        .modal-box-case {
             background: #ffffff; border-radius: 24px;
-            width: 1000px; height: 620px;
+            width: 1100px; height: 650px;
             display: flex; flex-direction: row; overflow: hidden; position: relative;
             box-shadow: 0 40px 80px rgba(0,0,0,0.5); transform: scale(0.85) translateY(40px);
             transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-        .modal-overlay.active .modal-box-case,
-        .modal-overlay.active .modal-box-simple { transform: scale(1) translateY(0); }
+        .modal-overlay.active .modal-box-case { transform: scale(1) translateY(0); }
 
-        .modal-case-left, .modal-simple-img-container {
-            flex: 1.5; background: #f9f7f6; display: flex; flex-direction: column; justify-content: center;
-            align-items: center; padding: 30px; position: relative; height: 100%;
+        .modal-case-left {
+            flex: 0 0 45%; background: #f9f7f6; display: flex; flex-direction: column; justify-content: center;
+            align-items: center; padding: 20px; position: relative; height: 100%;
+            cursor: pointer;
         }
-        .modal-case-img {
-            max-width: 100%; max-height: 80%; object-fit: contain; border-radius: 12px; display: none;
+        .modal-case-img { 
+            max-width: 100%; max-height: 90%; object-fit: contain; border-radius: 12px; display: none;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
         .modal-case-img.active { display: block; animation: fadeImg 0.5s ease; }
         @keyframes fadeImg { from { opacity: 0.4; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
 
-        .case-nav { position: absolute; bottom: 20px; display: flex; gap: 12px; }
-        .case-dot {
-            width: 10px; height: 10px; border-radius: 50%; background: #ddd; cursor: pointer; transition: 0.3s;
-        }
+        .case-nav { position: absolute; bottom: 20px; display: flex; gap: 12px; z-index: 5; }
+        .case-dot { width: 10px; height: 10px; border-radius: 50%; background: #ddd; cursor: pointer; transition: 0.3s; }
+        .case-dot:hover { background: var(--accent-pink); }
         .case-dot.active { background: var(--accent-burgundy); transform: scale(1.3); box-shadow: 0 0 10px rgba(107, 29, 33, 0.4); }
 
-        .modal-case-right, .modal-simple-text {
-            flex: 1; padding: 60px 45px; display: flex; flex-direction: column; justify-content: center; background: #fff; height: 100%;
+        .modal-case-right {
+            flex: 1; padding: 50px 45px; display: flex; flex-direction: column; justify-content: center;
+            background: #fff; height: 100%; overflow-y: auto;
         }
-        .modal-case-right h2, .modal-simple-text h3 {
-            font-family: var(--font-serif); font-size: 3rem; color: var(--accent-burgundy); margin-bottom: 15px;
+        .modal-case-right h2 { font-family: var(--font-serif); font-size: 2.8rem; color: var(--accent-burgundy); margin-bottom: 15px; }
+        .modal-case-right h4 { 
+            font-family: var(--font-sans); font-size: 0.95rem; color: var(--accent-pink); 
+            margin-bottom: 20px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;
         }
-        .modal-case-right h4 { font-family: var(--font-sans); font-size: 1rem; color: var(--accent-pink); margin-bottom: 20px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
-        .modal-case-right p, .modal-simple-text p {
-            font-size: 1.05rem; color: #444; line-height: 1.9; font-weight: 300; white-space: pre-wrap;
-        }
+        .modal-case-right p { font-size: 1rem; color: #444; line-height: 1.8; font-weight: 300; white-space: pre-wrap; }
 
-        .modal-close-case, .modal-close-simple {
+        .modal-close-case {
             position: absolute; top: 20px; right: 25px; font-size: 28px; cursor: pointer;
             color: #aaa; transition: transform 0.3s ease, color 0.2s; background: none; border: none; z-index: 10; line-height: 1;
         }
-        .modal-close-case:hover, .modal-close-simple:hover { color: var(--accent-burgundy); transform: rotate(90deg) scale(1.1); }
+        .modal-close-case:hover { color: var(--accent-burgundy); transform: rotate(90deg) scale(1.1); }
 
+        /* --- ОКНО ДЛЯ ОДИНОЧНЫХ РАБОТ (ПЛАКАТЫ, ОТКРЫТКИ) --- */
+        .modal-box-simple {
+            background: #ffffff; border-radius: 24px;
+            width: 1100px; height: 620px;
+            display: flex; flex-direction: row; overflow: hidden; position: relative;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.5); transform: scale(0.85) translateY(40px);
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .modal-overlay.active .modal-box-simple { transform: scale(1) translateY(0); }
+
+        /* Левая часть - КАРТИНКА (45%) */
+        .modal-simple-img-container {
+            flex: 0 0 45%; /* Строго 45% */
+            background: #f9f7f6; 
+            display: flex; justify-content: center; align-items: center; 
+            padding: 25px; 
+            height: 100%;
+            overflow: hidden; /* Чтобы ничего не вылезало */
+        }
+        .modal-simple-img-container img { 
+            max-width: 100%; 
+            max-height: 100%; 
+            object-fit: contain; 
+            border-radius: 12px; 
+            display: block;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        /* Правая часть - ТЕКСТ (55%) */
+        .modal-simple-text {
+            flex: 1; /* Занимает оставшиеся 55% */
+            padding: 50px 45px; 
+            display: flex; flex-direction: column; justify-content: center; 
+            background: #fff; 
+            height: 100%;
+            overflow-y: auto; /* Скролл, если текст длинный */
+        }
+        .modal-simple-text h3 { font-family: var(--font-serif); font-size: 2.5rem; color: var(--accent-burgundy); margin-bottom: 15px; }
+        .modal-simple-text p { font-size: 1rem; color: #444; line-height: 1.8; font-weight: 300; white-space: pre-wrap; }
+
+        .modal-close-simple {
+            position: absolute; top: 20px; right: 25px; font-size: 28px; cursor: pointer;
+            color: #aaa; transition: transform 0.3s ease, color 0.2s; background: none; border: none; z-index: 10; line-height: 1;
+        }
+        .modal-close-simple:hover { color: var(--accent-burgundy); transform: rotate(90deg) scale(1.1); }
+
+        /* === МОБИЛЬНАЯ АДАПТАЦИЯ === */
         @media (max-width: 900px) {
             .modal-overlay { padding: 0; }
             .modal-box-case, .modal-box-simple { width: 100%; height: 100%; flex-direction: column; border-radius: 0; }
@@ -317,53 +345,32 @@
             .modal-case-right, .modal-simple-text { height: 50%; width: 100%; padding: 25px 30px; flex: none; justify-content: flex-start; overflow-y: auto; }
             .modal-case-right h2, .modal-simple-text h3 { font-size: 1.8rem; margin-bottom: 10px; }
             .modal-case-right p, .modal-simple-text p { font-size: 0.95rem; line-height: 1.6; }
-            .modal-close-case, .modal-close-simple { top: 15px; right: 15px; font-size: 28px; color: #333; background: rgba(255,255,255,0.7); width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
+            .modal-close-case, .modal-close-simple { 
+                top: 15px; right: 15px; font-size: 28px; color: #333; 
+                background: rgba(255,255,255,0.7); width: 40px; height: 40px; border-radius: 50%; 
+                display: flex; justify-content: center; align-items: center; 
+            }
         }
 
-        /* ФУТЕР (Звездный шлейф) */
-        footer {
-            margin-top: 60px; padding: 70px 0 30px; border-top: 1px solid rgba(107, 29, 33, 0.06); text-align: center;
-            position: relative;
-        }
-        
-        /* Звездная россыпь перед футером (Мерцание) */
-        .star-field {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        .star {
-            font-size: 24px;
-            color: var(--accent-burgundy);
-            opacity: 0.15;
-            animation: starTwinkle 3s infinite alternate ease-in-out;
-        }
+        /* ФУТЕР */
+        footer { margin-top: 60px; padding: 70px 0 30px; border-top: 1px solid rgba(107, 29, 33, 0.06); text-align: center; position: relative; }
+        .star-field { display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; flex-wrap: wrap; }
+        .star { font-size: 24px; color: var(--accent-burgundy); opacity: 0.15; animation: starTwinkle 3s infinite alternate ease-in-out; }
         .star:nth-child(2) { animation-delay: 0.5s; font-size: 32px; }
         .star:nth-child(3) { animation-delay: 1s; }
         .star:nth-child(4) { animation-delay: 1.5s; font-size: 18px; }
         .star:nth-child(5) { animation-delay: 2s; }
         .star:nth-child(6) { animation-delay: 2.5s; font-size: 28px; }
+        @keyframes starTwinkle { 0% { opacity: 0.1; transform: scale(0.9); } 100% { opacity: 0.4; transform: scale(1.1); } }
 
-        @keyframes starTwinkle {
-            0% { opacity: 0.1; transform: scale(0.9); }
-            100% { opacity: 0.4; transform: scale(1.1); }
-        }
-
-        .footer-title {
-            font-family: var(--font-serif); font-size: 1.6rem; font-weight: 400; color: var(--accent-burgundy); margin-bottom: 10px;
-        }
+        .footer-title { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 400; color: var(--accent-burgundy); margin-bottom: 10px; }
         .footer-sub { color: var(--text-light); font-weight: 300; margin-bottom: 40px; font-size: 0.9rem; }
         .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-bottom: 40px; }
         .footer-link {
             color: var(--text-main); text-decoration: none; font-size: 0.95rem; font-weight: 400;
             transition: all 0.3s ease; position: relative; padding-bottom: 4px;
         }
-        .footer-link::after {
-            content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px;
-            background: var(--accent-burgundy); transition: width 0.3s ease;
-        }
+        .footer-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--accent-burgundy); transition: width 0.3s ease; }
         .footer-link:hover { color: var(--accent-burgundy); }
         .footer-link:hover::after { width: 100%; }
         .footer-copy { color: #bbb; font-size: 0.75rem; letter-spacing: 1px; }
@@ -371,7 +378,7 @@
         @media (max-width: 600px) {
             .footer-links { flex-direction: column; gap: 20px; }
             .footer-link { font-size: 1.05rem; padding: 5px 0; }
-            .star-field { display: none; } /* Скрываем звезды на мобильных */
+            .star-field { display: none; }
         }
     </style>
 </head>
@@ -383,6 +390,8 @@
             <a href="#" class="nav-logo">Lana Lupin</a>
             <ul class="nav-links">
                 <li><a href="#identity">Айдентика</a></li>
+                <li><a href="#merch">Мерч</a></li>
+                <li><a href="#presentations">Презентации</a></li>
                 <li><a href="#print">Полиграфия</a></li>
                 <li><a href="#posters">Плакаты</a></li>
                 <li><a href="#cards">Открытки</a></li>
@@ -409,7 +418,6 @@
     <!-- ============================== -->
     <div class="info-section-wrapper">
         
-        <!-- О себе -->
         <div class="info-block span-full">
             <div class="info-title">
                 <span class="decoration">✦</span> О себе
@@ -419,7 +427,6 @@
             </div>
         </div>
 
-        <!-- Обучение -->
         <div class="info-block">
             <div class="info-title">
                 <span class="decoration">✦</span> Обучение
@@ -432,7 +439,6 @@
             </div>
         </div>
 
-        <!-- Навыки -->
         <div class="info-block">
             <div class="info-title">
                 <span class="decoration">✦</span> Навыки
@@ -444,6 +450,7 @@
                         <li><strong>Adobe Photoshop</strong> — ретушь, коллажирование, подготовка к печати</li>
                         <li><strong>Adobe Illustrator</strong> — векторная графика, логотипы, иллюстрации</li>
                         <li><strong>Adobe InDesign</strong> — многостраничные макеты, книжная и журнальная верстка</li>
+                        <li><strong>CorelDRAW</strong> — векторная графика, работа с макетами для печати</li>
                     </ul>
                 </div>
                 <div class="skill-category">
@@ -461,6 +468,15 @@
                     </ul>
                 </div>
                 <div class="skill-category">
+                    <h4>AI-инструменты</h4>
+                    <ul>
+                        <li><strong>Nano Banana</strong> — генерация и редактирование изображений</li>
+                        <li><strong>GPT Image</strong> — создание визуалов по текстовому описанию</li>
+                        <li><strong>Flux</strong> — нейросетевая генерация графики</li>
+                        <li><strong>DeepSeek</strong> — работа с текстом и генерация идей</li>
+                    </ul>
+                </div>
+                <div class="skill-category" style="grid-column: 1 / -1;">
                     <h4>Дополнительно</h4>
                     <ul>
                         <li>Офисный пакет (<strong>Word</strong>, <strong>PowerPoint</strong>) — для презентаций и оформления документов</li>
@@ -472,17 +488,14 @@
     </div>
 
     <!-- ============================== -->
-    <!-- БЛОКИ ПОРТФОЛИО -->
-    <!-- ============================== -->
-
     <!-- БЛОК 1: АЙДЕНТИКА -->
+    <!-- ============================== -->
     <section class="section-wrapper" id="identity">
         <div class="section-header">
             <h2 class="section-title">Айдентика</h2>
             <div class="section-tags"><span>Брендинг</span><span>Мерч</span><span>Космос & Уют</span></div>
         </div>
         
-        <!-- Кейс Арсенал -->
         <div class="sub-case" id="case-arsenal">
             <h3 class="sub-case-title">Арсенал</h3>
             <p class="sub-case-desc">Ретро-футуризм и космические просторы. Нажмите на любое изображение, чтобы увидеть кейс целиком.</p>
@@ -498,7 +511,6 @@
             </div>
         </div>
 
-        <!-- Кейс Celestium -->
         <div class="sub-case" id="case-celestium">
             <h3 class="sub-case-title">Celestium</h3>
             <p class="sub-case-desc">Цифровой бренд на стыке пиксель-арта и IT-минимализма. Нажмите на любое изображение, чтобы увидеть кейс целиком.</p>
@@ -518,7 +530,6 @@
             </div>
         </div>
 
-        <!-- Кейс Заметки на сахаре -->
         <div class="sub-case" id="case-notes">
             <h3 class="sub-case-title">Заметки на сахаре</h3>
             <p class="sub-case-desc">Уютный книжный клуб в пастельных тонах. Нажмите на любое изображение, чтобы увидеть кейс целиком.</p>
@@ -537,14 +548,92 @@
         </div>
     </section>
 
-    <!-- БЛОК 2: ПОЛИГРАФИЯ -->
+    <!-- ============================== -->
+    <!-- БЛОК 2: МЕРЧ -->
+    <!-- ============================== -->
+    <section class="section-wrapper" id="merch">
+        <div class="section-header">
+            <h2 class="section-title">Мерч</h2>
+            <div class="section-tags"><span>Принты</span><span>Одежда</span><span>Фанатская эстетика</span></div>
+        </div>
+        
+        <div class="sub-case" id="case-true-detective-merch">
+            <h3 class="sub-case-title">True Detective</h3>
+            <p class="sub-case-desc">Фанатский мерч по мотивам сериала «Настоящий детектив». Визуальный язык построен на узнаваемых символах, контрастной чёрно-белой графике и цитатах. Подойдёт как преданным фанатам, так и ценителям современной минималистичной одежды с характером.</p>
+            <div class="gallery" onclick="openCaseModal('true-detective-merch', 'True Detective', `Капсульная коллекция мерча, вдохновлённая культовым сериалом «Настоящий детектив». 
+
+Главная задача была — не скатиться в простую «фанатскую атрибутику», а создать вещи, которые хочется носить вне зависимости от того, смотрел ты сериал или нет. 
+
+В основе — монохромная графика, типографика в духе оригинальных титров и ключевые символы: спираль (жёлтый король), оленьи рога, силуэты персонажей и цитата «Time is a flat circle». 
+
+В коллекции — чёрные и белые футболки, оверсайз-худи с лаконичным принтом и минималистичный чёрный худи с силуэтом на спине. Всё выполнено в сдержанном современном стиле, без лишнего пафоса — так, как носила бы сама Руст Коул.`, ['макап1.png', 'макап2.png', 'макап3.png', 'макап4.1.png', 'макап4.2.png'])">
+                <div class="gallery-item"><img src="макап1.png" alt="Мерч True Detective - футболка"></div>
+                <div class="gallery-item"><img src="макап2.png" alt="Мерч True Detective - футболка с цитатой"></div>
+                <div class="gallery-item"><img src="макап3.png" alt="Мерч True Detective - белая футболка"></div>
+                <div class="gallery-item"><img src="макап4.1.png" alt="Мерч True Detective - худи спина"></div>
+                <div class="gallery-item"><img src="макап4.2.png" alt="Мерч True Detective - худи спереди"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- БЛОК 3: ПРЕЗЕНТАЦИИ -->
+    <!-- ============================== -->
+    <section class="section-wrapper" id="presentations">
+        <div class="section-header">
+            <h2 class="section-title">Презентации</h2>
+            <div class="section-tags"><span>Питчинг</span><span>Слайды</span><span>Сторителлинг</span></div>
+        </div>
+        
+        <div class="sub-case" id="case-course-presentation">
+            <h3 class="sub-case-title">Курс по графическому дизайну</h3>
+            <p class="sub-case-desc">Яркая презентация для подростков, мечтающих освоить дизайн. Неоново-зелёный и фиолетовый, пиксельная типографика и дерзкий тон — так, чтобы говорить с молодым поколением на одном языке. Нажмите на слайд, чтобы посмотреть всю презентацию целиком.</p>
+            <div class="gallery" onclick="openCaseModal('course-presentation', 'Курс по графическому дизайну', `Презентация нового курса по графическому дизайну для подростков 13-17 лет. Задача была — не просто рассказать о программе, а зацепить: показать, что дизайн — это не «уроки рисования», а реальный навык, который можно монетизировать ещё в школе. 
+
+Я выбрал яркий неоново-зелёный и глубокий фиолетовый, добавил пиксельную типографику, гранжевые звёзды и дерзкий тон. 
+
+Внутри — структура курса, формат обучения, знакомство с преподавателем и то, что получит студент через 2 месяца (портфолио, первые заказы и сертификат). Каждый слайд — самостоятельная история, которая работает на одну цель: вдохновить и снять страх чистого листа.`, ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg'])">
+                <div class="gallery-item"><img src="1.jpg" alt="Слайд презентации 1"></div>
+                <div class="gallery-item"><img src="2.jpg" alt="Слайд презентации 2"></div>
+                <div class="gallery-item"><img src="3.jpg" alt="Слайд презентации 3"></div>
+                <div class="gallery-item"><img src="4.jpg" alt="Слайд презентации 4"></div>
+                <div class="gallery-item"><img src="5.jpg" alt="Слайд презентации 5"></div>
+                <div class="gallery-item"><img src="6.jpg" alt="Слайд презентации 6"></div>
+                <div class="gallery-item"><img src="7.jpg" alt="Слайд презентации 7"></div>
+                <div class="gallery-item"><img src="8.jpg" alt="Слайд презентации 8"></div>
+            </div>
+        </div>
+
+        <div class="sub-case" id="case-psychologist-presentation">
+            <h3 class="sub-case-title">Презентация для психолога</h3>
+            <p class="sub-case-desc">Серия слайдов для психолога, которая говорит с аудиторией о тревоге не академическим языком, а через мемы, поп-культуру и понятные образы. Нажмите на слайд, чтобы посмотреть всю презентацию целиком.</p>
+            <div class="gallery" onclick="openCaseModal('psychologist-presentation', 'Презентация для психолога', `Серия слайдов для психолога на тему тревоги. Задача была — сделать сложную тему понятной и не пугающей. 
+
+Я выбрал эстетику коллажа: винтажные фотографии, бумажная текстура, глубокий бордовый и пыльно-бежевый цвета. Каждый слайд — это отдельная мини-история с отсылками к поп-культуре (Доктор Стрэндж, Моника Геллер, Флэш, Винни-Пух) и мягким юмором. 
+
+Внутри — объяснение того, что такое тревога, как её распознать, техники заземления и советы по информационной гигиене. Дизайн помогает снять напряжение и говорить с читателем на равных.`, ['а.jpg', 'б.jpg', 'в.jpg', 'г.jpg', 'д.jpg', 'е.jpg', 'ж.jpg', 'з.jpg', 'и.jpg'])">
+                <div class="gallery-item"><img src="а.jpg" alt="Слайд презентации А"></div>
+                <div class="gallery-item"><img src="б.jpg" alt="Слайд презентации Б"></div>
+                <div class="gallery-item"><img src="в.jpg" alt="Слайд презентации В"></div>
+                <div class="gallery-item"><img src="г.jpg" alt="Слайд презентации Г"></div>
+                <div class="gallery-item"><img src="д.jpg" alt="Слайд презентации Д"></div>
+                <div class="gallery-item"><img src="е.jpg" alt="Слайд презентации Е"></div>
+                <div class="gallery-item"><img src="ж.jpg" alt="Слайд презентации Ж"></div>
+                <div class="gallery-item"><img src="з.jpg" alt="Слайд презентации З"></div>
+                <div class="gallery-item"><img src="и.jpg" alt="Слайд презентации И"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- БЛОК 4: ПОЛИГРАФИЯ -->
+    <!-- ============================== -->
     <section class="section-wrapper" id="print">
         <div class="section-header">
             <h2 class="section-title">Полиграфия</h2>
             <div class="section-tags"><span>Верстка</span><span>Печать</span><span>Редакция</span></div>
         </div>
         
-        <!-- Кейс Журнал -->
         <div class="sub-case">
             <h3 class="sub-case-title">Журнал</h3>
             <p class="sub-case-desc">Искусство типографики и архитектура текста. Верстка журнала с выразительными акцентами и сложной системой навигации по материалу.</p>
@@ -564,7 +653,6 @@
             </div>
         </div>
 
-        <!-- Кейс Газета -->
         <div class="sub-case">
             <h3 class="sub-case-title">Газета</h3>
             <p class="sub-case-desc">Эстетика городской хроники. Строгая модульная сетка, черно-белая фотография и выразительная типографика.</p>
@@ -583,7 +671,9 @@
         
     </section>
 
-    <!-- БЛОК 3: ПЛАКАТЫ -->
+    <!-- ============================== -->
+    <!-- БЛОК 5: ПЛАКАТЫ -->
+    <!-- ============================== -->
     <section class="section-wrapper" id="posters">
         <div class="section-header">
             <h2 class="section-title">Плакаты</h2>
@@ -621,7 +711,9 @@
         </div>
     </section>
 
-    <!-- БЛОК 4: ОТКРЫТКИ -->
+    <!-- ============================== -->
+    <!-- БЛОК 6: ОТКРЫТКИ -->
+    <!-- ============================== -->
     <section class="section-wrapper" id="cards">
         <div class="section-header">
             <h2 class="section-title">Открытки</h2>
@@ -646,7 +738,7 @@
         </div>
     </section>
 
-    <!-- ФУТЕР (С ЗВЕЗДНЫМ ПОЛЕМ) -->
+    <!-- ФУТЕР -->
     <footer>
         <div class="star-field">
             <span class="star">✦</span>
@@ -673,7 +765,7 @@
 <div class="modal-overlay" id="caseModal" onclick="closeCaseModalOutside(event)">
     <div class="modal-box-case">
         <button class="modal-close-case" onclick="closeCaseModal()">×</button>
-        <div class="modal-case-left" id="caseModalLeft">
+        <div class="modal-case-left" id="caseModalLeft" onclick="nextCaseImage(event)">
             <div class="case-nav" id="caseDots"></div>
         </div>
         <div class="modal-case-right">
@@ -699,7 +791,7 @@
 </div>
 
 <script>
-    // --- ЛОГИКА ДЛЯ БОЛЬШОГО ОКНА КЕЙСА ---
+    // --- ЛОГИКА ДЛЯ БОЛЬШОГО ОКНА КЕЙСА (Слайдер с ручным и авто-листанием) ---
     let currentCaseImages = [];
     let currentCaseIndex = 0;
     let caseInterval;
@@ -728,18 +820,54 @@
 
             const dot = document.createElement('div');
             dot.className = 'case-dot' + (index === 0 ? ' active' : '');
-            dot.onclick = () => showCaseImage(index);
+            dot.onclick = (e) => { 
+                e.stopPropagation(); 
+                showCaseImage(index); 
+                pauseAutoPlay();
+            };
             dotContainer.appendChild(dot);
         });
 
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
-
-        caseInterval = setInterval(() => {
-            let nextIndex = (currentCaseIndex + 1) % images.length;
-            showCaseImage(nextIndex);
-        }, 3000);
+        startAutoPlay();
     }
+
+    function startAutoPlay() {
+        clearInterval(caseInterval);
+        caseInterval = setInterval(() => {
+            if (currentCaseImages.length > 0) {
+                let nextIndex = (currentCaseIndex + 1) % currentCaseImages.length;
+                showCaseImage(nextIndex);
+            }
+        }, 4000);
+    }
+
+    function pauseAutoPlay() {
+        clearInterval(caseInterval);
+    }
+
+    function nextCaseImage(event) {
+        if (event.target.classList.contains('case-dot')) return;
+        let nextIndex = (currentCaseIndex + 1) % currentCaseImages.length;
+        showCaseImage(nextIndex);
+        pauseAutoPlay();
+    }
+
+    document.addEventListener('keydown', (e) => {
+        const modal = document.getElementById('caseModal');
+        if (modal.classList.contains('active')) {
+            if (e.key === 'ArrowRight') {
+                nextCaseImage(e);
+            } else if (e.key === 'ArrowLeft') {
+                let prevIndex = (currentCaseIndex - 1 + currentCaseImages.length) % currentCaseImages.length;
+                showCaseImage(prevIndex);
+                pauseAutoPlay();
+            } else if (e.key === 'Escape') {
+                closeCaseModal();
+            }
+        }
+    });
 
     function showCaseImage(index) {
         const images = document.querySelectorAll('.modal-case-img');
